@@ -1,0 +1,6 @@
+rails g model gender gender
+rails g model group_type group_type
+rails g scaffold group name group_type:references
+rails g scaffold human firstname lastname age:integer gender:references gender
+
+GroupType.create([{ group_type: 'male' }, { group_type: 'female' }, { group_type: 'other' }])
